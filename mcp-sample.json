@@ -1,0 +1,34 @@
+{
+  "mcpServers": {
+    "twitch-chat": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "twitch-irc-mcp"
+      ],
+      "env": {
+        "TWITCH_USERNAME": "your_bot_username",
+        "TWITCH_OAUTH_TOKEN": "oauth:xxxxxxxxxxxxxxxxxxxxxx",
+        "TWITCH_CHANNEL": "defaultchannel"
+      }
+    },
+    "twitch-chat-http": {
+      "type": "http",
+      "url": "http://localhost:3000/mcp/call",
+      "manifestUrl": "http://localhost:3000/mcp/manifest",
+      "command": "npx",
+      "args": [
+        "-y",
+        "twitch-irc-mcp",
+        "--http"
+      ],
+      "env": {
+        "TWITCH_USERNAME": "your_bot_username",
+        "TWITCH_OAUTH_TOKEN": "oauth:xxxxxxxxxxxxxxxxxxxxxx",
+        "TWITCH_CHANNEL": "defaultchannel",
+        "PORT": "3000"
+      }
+    }
+  }
+}
